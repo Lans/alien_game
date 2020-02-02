@@ -30,11 +30,11 @@ def check_keyup_events(event, ship):
 
 
 # 更新屏幕图像，并切换到新屏幕
-def update_scree(ai_settings, scree, ship, love):
+def update_scree(ai_settings, scree, ship):
     # 填充屏幕颜色
     scree.fill(ai_settings.bg_color)
     # 创建图像
     ship.biltme()
-    love.biltLove()
+    pygame.display.update()
     # 让屏幕可见
     pygame.display.flip()

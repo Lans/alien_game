@@ -1,8 +1,9 @@
+# coding=UTF-8
 import pygame
 # 导入外部py文件
 from setting import Settings
 from ship import Ship
-from love import Love
+
 # 导入外部方法
 import game_functions as gf
 
@@ -18,12 +19,12 @@ def run_game():
 
     # 绘制飞船
     ship = Ship(scree, ai_settings)
-    love = Love(scree)
+
     # 开始游戏
     while True:
         gf.check_events(ship)
         ship.update()
-        gf.update_scree(ai_settings, scree, ship, love)
+        gf.update_scree(ai_settings, scree, ship)
 
 
 run_game()
